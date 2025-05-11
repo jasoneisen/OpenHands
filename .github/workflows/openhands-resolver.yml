@@ -41,7 +41,7 @@ on:
       LLM_NUM_RETRIES:
         required: false
         type: number
-        default: 4
+        default: 5
       LLM_RETRY_MIN_WAIT:
         required: false
         type: number
