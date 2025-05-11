@@ -188,6 +188,11 @@ jobs:
           echo "SANDBOX_ENV_GITHUB_TOKEN=${{ secrets.PAT_TOKEN || github.token }}" >> $GITHUB_ENV
           echo "SANDBOX_BASE_CONTAINER_IMAGE=${{ inputs.base_container_image }}" >> $GITHUB_ENV
 
+          echo "LLM_NUM_RETRIES=${{ inputs.LLM_NUM_RETRIES || 4 }}" >> $GITHUB_ENV
+          echo "LLM_RETRY_MIN_WAIT=${{ inputs.LLM_RETRY_MIN_WAIT || 5 }}" >> $GITHUB_ENV
+          echo "LLM_RETRY_MAX_WAIT=${{ inputs.LLM_RETRY_MAX_WAIT || 30 }}" >> $GITHUB_ENV
+          echo "LLM_RETRY_MULTIPLIER=${{ inputs.LLM_RETRY_MULTIPLIER || 2 }}" >> $GITHUB_ENV
+
           # Set branch variables
           echo "TARGET_BRANCH=${{ inputs.target_branch || 'main' }}" >> $GITHUB_ENV
 
