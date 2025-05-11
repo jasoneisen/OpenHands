@@ -38,6 +38,22 @@ on:
         required: false
         type: string
         default: "ubuntu-latest"
+      LLM_NUM_RETRIES:
+        required: false
+        type: number
+        default: 4
+      LLM_RETRY_MIN_WAIT:
+        required: false
+        type: number
+        default: 5
+      LLM_RETRY_MAX_WAIT:
+        required: false
+        type: number
+        default: 175
+      LLM_RETRY_MULTIPLIER:
+        required: false
+        type: number
+        default: 2
     secrets:
       LLM_MODEL:
         required: false
